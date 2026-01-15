@@ -13,14 +13,16 @@ body {
     color: #000;
 }
 
+/* ---------- MAIN CONTAINER ---------- */
 .container {
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 40px auto;
     background: #ffffff;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* ---------- HEADER ---------- */
 header {
     text-align: center;
 }
@@ -35,45 +37,121 @@ header h2 {
     font-size: 20px;
 }
 
+/* ---------- SECTIONS ---------- */
 section {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .section-title {
-    font-size: 22px;
+    font-size: 26px;
     color: #0e8b8b;
     border-bottom: 2px solid #0e8b8b;
-    margin-bottom: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 25px;
 }
 
 ul {
     line-height: 1.8;
 }
 
+/* ---------- SCOPE ---------- */
+.scope {
+    display: grid;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #333333;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.scope img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ---------- CHAPTERS (LIGHT RED SECTION) ---------- */
+.chapters-section {
+    background: #fff0f0;
+    padding: 25px;
+    border-left: 6px solid #b30000;
+    border-radius: 12px;
+}
+
+.chapters-section li {
+    margin-bottom: 6px;
+}
+
+/* ---------- EDITORS ---------- */
 .editors {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
 .editor {
-    background: #f1f1f1;
-    padding: 10px;
-    border-radius: 8px;
+    background: #f3f3f3;
+    border-radius: 16px;
+    padding: 20px;
     text-align: center;
 }
 
+.editor img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.editor strong {
+    font-size: 17px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editor p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ---------- IMPORTANT DATES ---------- */
 .highlight {
     background: #e6fffa;
-    padding: 15px;
+    padding: 20px;
     border-left: 5px solid #0e8b8b;
 }
 
+/* ---------- SUBMISSION DETAILS (CENTER QR) ---------- */
+.submission-qr {
+    text-align: center; /* Center the QR code */
+    margin-top: 20px;
+}
+
+.submission-qr img {
+    max-width: 200px; /* Optional: restrict size */
+    height: auto;
+    display: inline-block;
+}
+
+.submission-qr p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: blue;
+}
+
+/* ---------- FOOTER ---------- */
 .footer {
-    margin-top: 30px;
+    margin-top: 60px;
+    font-size:20px;
     text-align: center;
     font-weight: bold;
+    color: red;
 }
+
 a {
     color: #b30000;
     text-decoration: none;
@@ -88,7 +166,7 @@ a {
 <header>
     <h1>CALL FOR BOOK CHAPTERS</h1>
     <h2>
-        An Intelligent and Emerging Technologies for Sustainable Aquaculture Development:  
+        An Intelligent and Emerging Technologies for Sustainable Aquaculture Development  
         <br>AI, IoT and Quantum Perspectives
     </h2>
     <p><strong>Publisher:</strong> Taylor & Francis Group</p>
@@ -96,27 +174,33 @@ a {
 
 <section>
     <div class="section-title">Scope of the Book</div>
-    <p>
-        This book explores how intelligent and emerging technologies are transforming aquaculture
-        into sustainable, efficient, and data-driven systems. It focuses on Artificial Intelligence (AI),
-        Internet of Things (IoT), and quantum-inspired computing to address challenges such as real-time
-        water quality monitoring, fish health management, feeding optimization, environmental
-        sustainability, and climate resilience.
-    </p>
+
+    <div class="scope">
+        <p>
+            This book explores how intelligent and emerging technologies are transforming
+            aquaculture into sustainable, efficient, and data-driven systems. It focuses on
+            Artificial Intelligence (AI), Internet of Things (IoT), and quantum-inspired
+            computing to address challenges such as real-time water quality monitoring,
+            fish health management, feeding optimization, environmental sustainability,
+            and climate resilience.
+        </p>
+
+        <img src="scope.jpg" alt="Smart Aquaculture">
+    </div>
 </section>
 
-<section>
+<section class="chapters-section">
     <div class="section-title">Proposed Chapters</div>
     <ul>
-        <li>Chapter  1: Sustainable Aquaculture Enabled by Intelligent Technologies</li>
-        <li>Chapter  2: From Traditional Fish Farming to Smart Aquaculture</li>
-        <li>Chapter  3: IoT-Based Aquaculture Monitoring Systems</li>
-        <li>Chapter  4: Real-Time Water Quality Monitoring Using Smart Sensors</li>
-        <li>Chapter  5: Wireless IoT Networks for Aquaculture Management</li>
-        <li>Chapter  6: Big Data Analytics for Intelligent Aquaculture</li>
-        <li>Chapter  7: Machine Learning Models for Aquaculture Prediction</li>
-        <li>Chapter  8: Deep Learning for Fish Health & Disease Detection</li>
-        <li>Chapter  9: AI-Based Feeding and Yield Optimization</li>
+        <li>Chapter 1: Sustainable Aquaculture Enabled by Intelligent Technologies</li>
+        <li>Chapter 2: From Traditional Fish Farming to Smart Aquaculture</li>
+        <li>Chapter 3: IoT-Based Aquaculture Monitoring Systems</li>
+        <li>Chapter 4: Real-Time Water Quality Monitoring Using Smart Sensors</li>
+        <li>Chapter 5: Wireless IoT Networks for Aquaculture Management</li>
+        <li>Chapter 6: Big Data Analytics for Intelligent Aquaculture</li>
+        <li>Chapter 7: Machine Learning Models for Aquaculture Prediction</li>
+        <li>Chapter 8: Deep Learning for Fish Health & Disease Detection</li>
+        <li>Chapter 9: AI-Based Feeding and Yield Optimization</li>
         <li>Chapter 10: Edge & Federated Learning in Aquaculture</li>
         <li>Chapter 11: Explainable AI for Sustainable Aquaculture</li>
         <li>Chapter 12: Quantum Computing for Complex Optimization</li>
@@ -128,21 +212,30 @@ a {
 
 <section>
     <div class="section-title">Editors</div>
+
     <div class="editors">
         <div class="editor">
-            <strong>Dr. Peda Gopi Arepalli</strong><br>
-            Vignan’s Institute of Technology & Science for Women<br>
-            Guntur, India
+            <img src="editor1.jpeg" alt="Dr. Peda Gopi Arepalli">
+            <strong>Dr. Peda Gopi Arepalli</strong>
+            <p>Vignan’s Institute of Technology & Science for Women<br>Guntur, India</p>
         </div>
+
         <div class="editor">
-            <strong>Dr. K. Jairam Naik</strong><br>
-            NIT Raipur, India
+            <img src="editor2.jpeg" alt="Dr. K. Jairam Naik">
+            <strong>Dr. K. Jairam Naik</strong>
+            <p>NIT Raipur, India</p>
         </div>
+
         <div class="editor">
+            <img src="editor3.jpeg" alt="Dr. Ch. Bhanu Prakash">
             <strong>Dr. Ch. Bhanu Prakash</strong>
+            <p>College of Fishery Science, Pebbair, Wanaparthy, India</p>
         </div>
+
         <div class="editor">
+            <img src="editor4.jpeg" alt="Dr. Agung Triayudi">
             <strong>Dr. Agung Triayudi</strong>
+            <p>National University, India</p>
         </div>
     </div>
 </section>
@@ -165,10 +258,12 @@ a {
         ❌ No publication charges<br>
         📧 Email: callforbookchapters@gmail.com<br>
         🔗 Submission Form:
-        <a href="https://forms.gle/i6cq4268N8C5k3yN9" target="_blank">
-            Click here
-        </a>
+        <a href="https://forms.gle/i6cq4268N8C5k3yN9" target="_blank">Click here</a>
     </p>
+     <div class="submission-qr">
+        <p>Scan to submit your chapter</p>
+        <img src="qr-code.jpeg" alt="Submission QR Code">
+    </div>
 </section>
 
 <div class="footer">
@@ -179,4 +274,3 @@ a {
 
 </body>
 </html>
-
